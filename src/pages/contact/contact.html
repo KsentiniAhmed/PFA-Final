@@ -1,0 +1,36 @@
+
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+    photos
+    </ion-title>
+  
+   <ion-buttons end>
+      <button (click)="logout()" ion-button icon-only >
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+      <button ion-buttons icon-left round block ion-button color="secondary" royal (click)="mesphoto()"> 
+         <ion-icon name="archive"> </ion-icon>Voir tes photo de commandes
+      </button>
+
+ 
+
+
+ <ul>
+<li *ngFor="let a of patdata; let iteration = index">
+<h1> image numero : {{iteration}} </h1>
+<h2> a été capter le : {{datedata[iteration]}} </h2>
+<img src="{{ patdata[iteration] }}" style="width: 100%" >
+  
+</li> 
+</ul> 
+
+
+</ion-content>

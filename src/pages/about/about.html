@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Camera
+    </ion-title>
+  
+   <ion-buttons end>
+      <button (click)="logout()" ion-button icon-only >
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+  <h3>Camera view page</h3>
+      <button ion-buttons icon-left round block ion-button color="secondary" royal (click)="openCamera()"> 
+         <ion-icon name="camera"> </ion-icon>Take photo
+      </button>
+
+      <button ion-buttons icon-left  round block ion-button royal (click)="openGalerie()"> 
+         <ion-icon name="star"> </ion-icon>Galerie
+      </button>
+ 
+       <!--img [src]="base64Image" *ngIf="base64Image" /-->
+<img src="{{pathForImage(lastImage)}}" style="width: 100%" [hidden]="lastImage === null">
+ <button ion-buttons icon-left  round block ion-button royal (click)="uploadImage()" [hidden]="lastImage == null"> 
+         <ion-icon name="archive"> </ion-icon>Upload
+      </button>
+ 
+</ion-content>
+
