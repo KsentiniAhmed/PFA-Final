@@ -39,7 +39,7 @@ export class LoginPage {
     let data = JSON.stringify({name, pass});
     /*ou on peut ajouter header et le upload de l'image reste simple sans transfermer en json le string qui le recoit*/
     console.log(data);
-    let link = "http://127.0.0.1:8080/UploadPhoto/Auth";
+    let link = "http://192.168.1.151:8080/UploadPhoto/Auth";
     this.http.post(link, data)
         .map(res => res.json())
         .subscribe(data =>{

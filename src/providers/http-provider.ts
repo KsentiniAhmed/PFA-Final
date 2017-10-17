@@ -16,6 +16,6 @@ export class HttpProvider {
   }
 
 getJsonData(){
-  return this.http.get('http://localhost:8080/UploadPhoto/Photos').map(res => res.json());
+  return this.http.get('http://http://192.168.1.151:8080/UploadPhoto/Photos').map(res => res.json());
 }
 }

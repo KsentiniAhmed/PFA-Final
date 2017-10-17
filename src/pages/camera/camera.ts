@@ -77,7 +77,7 @@ export class CameraPage {
       this.path = path;
       this.displayPhotoMenu = true;
 
-  this.makeFileRequest('http://127.0.0.1:8080/UploadPhoto/Upload?token='+localStorage.getItem("token"),[],path).then((result) => {
+  this.makeFileRequest('http://192.168.1.151:8080/UploadPhoto/Upload?token='+localStorage.getItem("token"),[],path).then((result) => {
             console.log(result);
         }, (error) => {
             console.error(error);
@@ -109,7 +109,7 @@ export class CameraPage {
   }   
 public uploadPhoto() {
   this.filesToUpload= this.path;
- this.makeFileRequest('http://192.168.1.8:8080/UploadPhoto/Upload',[], this.filesToUpload).then((result) => {
+ this.makeFileRequest('http://192.168.1.151:8080/UploadPhoto/Upload',[], this.filesToUpload).then((result) => {
             console.log(result);
         }, (error) => {
             console.error(error);

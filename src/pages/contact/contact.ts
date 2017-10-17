@@ -20,7 +20,7 @@ export class ContactPage {
  datedata = new Array(); 
  newsData;
   mesphoto(){
-       let link = "http://127.0.0.1:8080/UploadPhoto/Photos?token="+localStorage.getItem("token");
+       let link = "http://192.168.1.151:8080/UploadPhoto/Photos?token="+localStorage.getItem("token");
       this.http.get(link)
         .map(res => res.json())
         .subscribe(data =>{

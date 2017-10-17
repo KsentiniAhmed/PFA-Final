@@ -120,7 +120,7 @@ public pathForImage(img) {
 }
 public uploadImage() {
   // Destination URL
-  var url = "http://192.168.1.11:8080/UploadPhoto/Upload?token="+localStorage.getItem("token");
+  var url = "http://192.168.1.151:8080/UploadPhoto/Upload?token="+localStorage.getItem("token");
  
   // File for Upload
   var targetPath = this.pathForImage(this.lastImage);
